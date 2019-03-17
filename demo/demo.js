@@ -26,8 +26,8 @@ export default class Demo extends Component {
              zoom={zoom}
              width={600}
              height={400}>
-          <Marker anchor={[50.879, 4.6997]} payload={1} onClick={this.handleMarkerClick} />
-          <Marker anchor={[50.874, 4.6947]} payload={2} onClick={this.handleMarkerClick} />
+          <Marker markerType="finish" label={1} anchor={[50.879, 4.6997]} payload={1} onClick={this.handleMarkerClick} />
+          <Marker label={2} anchor={[50.874, 4.6947]} payload={2} onClick={this.handleMarkerClick} />
         </Map>
       </div>
     )

@@ -1,6 +1,9 @@
 import { React, Inferno, Component } from './infact'
 import PropTypes from 'prop-types'
 
+import redPin from './img/big-red-pin.png'
+import finishPin from './img/finish.png'
+import greenFlag from './img/greenFlag.png'
 import pin from './img/pin.png'
 import pinRetina from './img/pin@2x.png'
 import pinHover from './img/pin-hover.png'
@@ -21,6 +24,27 @@ const numberCircle= {
   background: '#fff',
   border: '2px solid #666',
   color: '#666',
+  textAlign: 'center',
+  font: '22px Arial, sans-serif'
+}
+
+const stepLabel= {
+  //behavior: url(PIE.htc);
+  /* remove if you don't care about IE8  */
+  width: '28px',
+  height: '28px',
+  background: '#fff',
+  color: 'red',
+  textAlign: 'center',
+  font: '22px Arial, sans-serif'
+}
+
+const pinMarker= {
+  //behavior: url(PIE.htc);
+  /* remove if you don't care about IE8  */
+  paddingBottom:'10px',
+  width: '28px',
+  height: '28px',
   textAlign: 'center',
   font: '22px Arial, sans-serif'
 }
@@ -46,7 +70,10 @@ export default class Marker extends Component {
 
     // pigeon functions
     latLngToPixel: PropTypes.func,
-    pixelToLatLng: PropTypes.func
+    pixelToLatLng: PropTypes.func,
+    markerType: PropTypes.string,
+    label: PropTypes.string,
+
   }
 
   constructor (props) {
@@ -75,6 +102,14 @@ export default class Marker extends Component {
   }
 
   image () {
+    if(this.props.markerType=='plot')
+    {
+      return redPin;
+    }
+    if(this.props.markerType=='finish')
+    {
+      return greenFlag;
+    }
     return this.isRetina() ? (this.isHover() ? pinHoverRetina : pinRetina) : (this.isHover() ? pinHover : pin)
   }
 
@@ -131,8 +166,10 @@ export default class Marker extends Component {
            onContextMenu={this.handleContextMenu}
            onMouseOver={this.handleMouseOver}
            onMouseOut={this.handleMouseOut}>
-           <div style={numberCircle}>1</div>
-        <img src={this.image()} width={29} height={34} alt='' />
+           <div>
+           <div style={stepLabel}>{this.props.label}</div>
+        <img src={this.image()} style={pinMarker} alt='' />
+        </div>
       </div>
     )
   }
