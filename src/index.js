@@ -33,9 +33,11 @@ const stepLabel= {
   width: '28px',
   height: '28px',
   background: '#fff',
-  color: 'red',
+  color: 'cornflowerblue',
   textAlign: 'center',
-  font: '22px Arial, sans-serif'
+  font: '22px Arial, sans-serif',
+  left: '20px',
+  position: 'absolute'
 }
 
 const pinMarker= {
@@ -45,7 +47,9 @@ const pinMarker= {
   width: '28px',
   height: '28px',
   textAlign: 'center',
-  font: '22px Arial, sans-serif'
+  font: '22px Arial, sans-serif',
+  position: 'absolute',
+    top: '-10px',
 }
 
 export default class Marker extends Component {
