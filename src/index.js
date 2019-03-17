@@ -43,7 +43,7 @@ const stepLabel= {
 const pinMarker= {
   //behavior: url(PIE.htc);
   /* remove if you don't care about IE8  */
-  paddingBottom:'10px',
+  //paddingBottom:'10px',
   width: '28px',
   height: '28px',
   textAlign: 'center',
