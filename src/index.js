@@ -52,7 +52,7 @@ const pinMarker= {
 const hoverStyle={
   background:'white',
   color:'darkgreen',
-  bottom: '13px',
+  bottom: '15px',
   position: 'absolute',
   borderRadius:'10px',
   textTransform:'lowercase',
@@ -179,7 +179,7 @@ export default class Marker extends Component {
            onMouseOver={this.handleMouseOver}
            onMouseOut={this.handleMouseOut}>
            <div>
-           {1 &&  <div style={hoverStyle}> {this.props.hoverText} </div>}
+           {this.state.hover &&  <div style={hoverStyle}> {this.props.hoverText} </div>}
            <div style={stepLabel}>{this.props.label}</div>
         <img src={this.image()} style={pinMarker} alt='' />
         </div>
