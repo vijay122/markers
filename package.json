@@ -15,6 +15,7 @@
     "start:react": "BABEL_ENV=react ./node_modules/.bin/webpack-dev-server --history-api-fallback --hot --host 0.0.0.0 --port 4040",
     "start:inferno": "BABEL_ENV=inferno ./node_modules/.bin/webpack-dev-server --history-api-fallback --hot --host 0.0.0.0 --port 4040",
     "build": "npm run build:demo && npm run build:lib",
+    "buildIt": "BABEL_ENV=react node build.js production",
     "build:demo": "npm run build:demo:react && npm run build:demo:inferno",
     "build:demo:react": "BABEL_ENV=react node build.js production",
     "build:demo:inferno": "BABEL_ENV=inferno node build.js production",

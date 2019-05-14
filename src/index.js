@@ -6,7 +6,7 @@ import greenFlag from './img/green-flag.png'
 import pin from './img/pin.png'
 import pinRetina from './img/pin@2x.png'
 import pinHover from './img/pin-hover.png'
-import pinHoverRetina from './img/pin-hover@2x.png'
+import pinHoverRetina from './img/pin-hover@2x.png';
 
 const imageOffset = {
   left: 15,
@@ -47,6 +47,18 @@ const pinMarker= {
   font: '22px Arial, sans-serif',
   position: 'absolute',
     top: '-10px',
+}
+
+const hoverStyle={
+  background:'white',
+  color:'darkgreen',
+  top: '-30px',
+  position: 'absolute',
+  borderRadius:'10px',
+  textTransform:'lowercase',
+  border:'3px solid aliceblue',
+  paddingLeft:'10px',
+  paddingRight:'10px',
 }
 
 export default class Marker extends Component {
@@ -167,6 +179,7 @@ export default class Marker extends Component {
            onMouseOver={this.handleMouseOver}
            onMouseOut={this.handleMouseOut}>
            <div>
+           {this.state.hover &&  <div style={hoverStyle}> {this.props.hoverText} </div>}
            <div style={stepLabel}>{this.props.label}</div>
         <img src={this.image()} style={pinMarker} alt='' />
         </div>
