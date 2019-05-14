@@ -35,8 +35,8 @@ export default class Demo extends Component {
              zoom={zoom}
              width={600}
              height={400}>
-          <Marker markerType="plot" hoverText={"erode"} label={"1"} anchor={[50.879, 4.6997] } onMouseOut={this.mouseOut} onMouseOver={this.mouseOver} payload={1} onClick={this.handleMarkerClick} />
-          <Marker label={"2"} hoverText={"madras"} anchor={[50.874, 4.6947]} payload={2} onClick={this.handleMarkerClick} />
+          <Marker markerType="plot" hoverText={"erode mahal anddd"} label={"1"} anchor={[50.879, 4.6997] } onMouseOut={this.mouseOut} onMouseOver={this.mouseOver} payload={1} onClick={this.handleMarkerClick} />
+          <Marker label={"2"} hoverText={"madrasdsfsdfsdfsdfsdf"} anchor={[50.874, 4.6947]} payload={2} onClick={this.handleMarkerClick} />
         </Map>
       </div>
     )
