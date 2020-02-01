@@ -1,7 +1,7 @@
 import { React, Inferno, Component } from './infact'
 import PropTypes from 'prop-types'
 
-import redPin from './img/big-red-pin.png'
+import redPin from './img/location.svg'
 import greenFlag from './img/green-flag.png'
 import pin from './img/pin.png'
 import pinRetina from './img/pin@2x.png'
@@ -30,19 +30,22 @@ const numberCircle= {
 const stepLabel= {
   //behavior: url(PIE.htc);
   /* remove if you don't care about IE8  */
-  width: '28px',
-  height: '28px',
+  width: '20px',
+  height: '20px',
   background: '#fff',
   color: 'cornflowerblue',
   textAlign: 'center',
-  font: '22px Arial, sans-serif',
-  left: '20px',
-  position: 'absolute'
+  font: '14px Arial, sans-serif',
+  left: '7px',
+  top:'-7px',
+  position: 'absolute',
+  borderRadius: '50%',
+  zIndex:'1'
 }
 
 const pinMarker= {
-  width: '28px',
-  height: '28px',
+  width: '34px',
+  height: '34px',
   textAlign: 'center',
   font: '22px Arial, sans-serif',
   position: 'absolute',

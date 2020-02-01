@@ -25,7 +25,9 @@
     "build:lib:images": "cp -a ./src/img ./lib/react/ && cp -a ./src/img ./lib/inferno/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "pigeon-overlay": "^0.2.3"
+  },
   "peerDependencies": {
     "pigeon-maps": "*",
     "prop-types": "*"
